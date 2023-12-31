@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Core.DTOs;
+using Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarseerExam.Controllers
@@ -7,18 +9,18 @@ namespace CarseerExam.Controllers
     [ApiController]
     public class ModelsController : Controller
     {
+        private readonly IModelsService _modelsService;
 
-        public ModelsController()
+        public ModelsController(IModelsService modelsService)
         {
-            
+            _modelsService = modelsService;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetModels([FromQuery] int modelYear, [FromQuery] string make)
+        public async Task<IActionResult> GetModels([FromQuery] GetModelRequestDTO request)
         {
 
-
-            return Ok();
+            return Ok(await _modelsService.GetModelsForMakeIdYear(request));
         }
     }
 }

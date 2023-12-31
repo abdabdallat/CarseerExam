@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarseerExam", "CarseerExam.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Core\Core.csproj", "{D7FAC346-65B9-418D-A133-3C6C6D0F78F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "..\Services\Services.csproj", "{2D8A53DA-8C07-4F34-8F84-2DEFFDB92BEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "..\Services\Infrastructure.csproj", "{2D8A53DA-8C07-4F34-8F84-2DEFFDB92BEE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration", "..\Integration\Integration.csproj", "{F0E440D1-3CF7-47B3-BDD7-0715D671C500}"
 EndProject

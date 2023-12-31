@@ -1,3 +1,9 @@
+using Infrastructure.Interfaces;
+using Infrastructure.Services;
+using Integration.Interfaces;
+using Integration.Services;
+using Microsoft.Extensions.FileProviders;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,7 +12,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<IModelsIntegrationService, ModelsIntegrationService>();
+builder.Services.AddScoped<IModelsService, ModelService>();
 
+ 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
