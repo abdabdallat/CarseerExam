@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Core\obj\**" />
+    <Compile Remove="Integration\bin\**" />
+    <Compile Remove="Integration\obj\**" />
+    <Compile Remove="Services\bin\**" />
+    <Compile Remove="Services\obj\**" />
+    <Compile Remove="UnitTests\bin\**" />
+    <Compile Remove="UnitTests\obj\**" />
+    <Content Remove="Core\obj\**" />
+    <Content Remove="Integration\bin\**" />
+    <Content Remove="Integration\obj\**" />
+    <Content Remove="Services\bin\**" />
+    <Content Remove="Services\obj\**" />
+    <Content Remove="UnitTests\bin\**" />
+    <Content Remove="UnitTests\obj\**" />
+    <EmbeddedResource Remove="Core\obj\**" />
+    <EmbeddedResource Remove="Integration\bin\**" />
+    <EmbeddedResource Remove="Integration\obj\**" />
+    <EmbeddedResource Remove="Services\bin\**" />
+    <EmbeddedResource Remove="Services\obj\**" />
+    <EmbeddedResource Remove="UnitTests\bin\**" />
+    <EmbeddedResource Remove="UnitTests\obj\**" />
+    <None Remove="Core\obj\**" />
+    <None Remove="Integration\bin\**" />
+    <None Remove="Integration\obj\**" />
+    <None Remove="Services\bin\**" />
+    <None Remove="Services\obj\**" />
+    <None Remove="UnitTests\bin\**" />
+    <None Remove="UnitTests\obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.14" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Services\Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
